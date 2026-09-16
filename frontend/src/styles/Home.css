@@ -1,0 +1,567 @@
+/* =========================================
+   HOME PAGE
+========================================= */
+
+.home-notes-section {
+  background: #f8f9fb;
+  padding: 35px 7% 40px;
+  min-height: 520px;
+}
+
+
+/* =========================================
+   HEADER
+========================================= */
+
+.home-notes-header {
+  max-width: 1200px;
+  margin: 0 auto 22px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 20px;
+}
+
+.home-notes-header h2 {
+  margin: 0;
+
+  font-size: 30px;
+  font-weight: 700;
+
+  color: #222;
+}
+
+.home-notes-header p {
+  margin: 6px 0 0;
+
+  font-size: 14px;
+  color: #777;
+}
+
+
+/* =========================================
+   VIEW ALL BUTTON
+========================================= */
+
+.view-all-notes-btn {
+  border: none;
+
+  background: #ff385c;
+  color: white;
+
+  padding: 11px 20px;
+
+  border-radius: 25px;
+
+  font-size: 14px;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition: all 0.25s ease;
+
+  white-space: nowrap;
+}
+
+.view-all-notes-btn:hover {
+  background: #e91e46;
+
+  transform: translateY(-2px);
+
+  box-shadow: 0 6px 15px rgba(255, 56, 92, 0.25);
+}
+
+
+/* =========================================
+   NOTES GRID
+========================================= */
+
+.home-notes-section .notes-grid {
+  max-width: 1200px;
+
+  margin: 0 auto;
+
+  display: grid;
+
+  grid-template-columns:
+    repeat(3, minmax(0, 1fr));
+
+  gap: 20px;
+}
+
+
+/* =========================================
+   NOTE CARD
+========================================= */
+
+.home-notes-section .note-card {
+  background: white;
+
+  border-radius: 16px;
+
+  overflow: hidden;
+
+  border: 1px solid #eeeeee;
+
+  box-shadow:
+    0 5px 18px rgba(0, 0, 0, 0.07);
+
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+
+  min-height: 0;
+}
+
+.home-notes-section .note-card:hover {
+  transform: translateY(-5px);
+
+  box-shadow:
+    0 12px 28px rgba(0, 0, 0, 0.12);
+}
+
+
+/* =========================================
+   CARD IMAGE
+========================================= */
+
+.home-notes-section .note-card-image {
+  height: 125px;
+
+  background:
+    linear-gradient(
+      135deg,
+      #fff0f3,
+      #f7f8fa
+    );
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  overflow: hidden;
+}
+
+.home-notes-section .note-card-image img {
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+}
+
+.home-notes-section .default-note-image {
+  font-size: 48px;
+}
+
+
+/* =========================================
+   CARD CONTENT
+========================================= */
+
+.home-notes-section .note-card-content {
+  padding: 16px 18px;
+}
+
+.home-notes-section .note-card-content h2 {
+  margin: 0 0 8px;
+
+  font-size: 18px;
+
+  line-height: 1.3;
+
+  color: #222;
+
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.home-notes-section .note-description {
+  display: none;
+}
+
+.home-notes-section .note-info {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 4px;
+
+  margin-bottom: 8px;
+}
+
+.home-notes-section .note-info span {
+  font-size: 13px;
+
+  color: #666;
+}
+
+.home-notes-section .note-subject {
+  margin: 5px 0;
+
+  font-size: 13px;
+
+  color: #777;
+}
+
+.home-notes-section .note-subject strong {
+  color: #444;
+}
+
+
+/* =========================================
+   RATING
+========================================= */
+
+.home-notes-section .note-bottom {
+  margin-top: 10px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+}
+
+.home-notes-section .note-rating {
+  font-size: 14px;
+
+  font-weight: 600;
+
+  color: #333;
+}
+
+
+/* =========================================
+   VIEW NOTE
+========================================= */
+
+.home-notes-section .view-note-btn {
+  color: #ff385c;
+
+  font-size: 13px;
+
+  font-weight: 600;
+
+  text-decoration: none;
+
+  transition: color 0.2s ease;
+}
+
+.home-notes-section .view-note-btn:hover {
+  color: #d91e43;
+}
+
+
+/* =========================================
+   EDIT / DELETE
+   Hide on Home page
+========================================= */
+
+.home-notes-section .note-actions {
+  display: none;
+}
+
+
+/* =========================================
+   PREVIOUS / NEXT
+========================================= */
+
+.home-notes-navigation {
+  max-width: 1200px;
+
+  margin: 24px auto 0;
+
+  display: flex;
+
+  justify-content: center;
+
+  align-items: center;
+
+  gap: 15px;
+}
+
+.home-nav-btn {
+  border: 1px solid #dddddd;
+
+  background: white;
+
+  color: #333;
+
+  padding: 9px 18px;
+
+  border-radius: 22px;
+
+  font-size: 14px;
+
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition: all 0.2s ease;
+}
+
+.home-nav-btn:hover:not(:disabled) {
+  background: #ff385c;
+
+  color: white;
+
+  border-color: #ff385c;
+
+  transform: translateY(-2px);
+}
+
+.home-nav-btn:disabled {
+  opacity: 0.45;
+
+  cursor: not-allowed;
+}
+
+.home-page-info {
+  min-width: 55px;
+
+  text-align: center;
+
+  font-size: 14px;
+
+  font-weight: 600;
+
+  color: #555;
+}
+
+
+/* =========================================
+   HERO - COMPACT
+========================================= */
+
+.hero {
+  min-height: 270px;
+
+  padding: 50px 20px;
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+  justify-content: center;
+
+  text-align: center;
+
+  background:
+    linear-gradient(
+      135deg,
+      #fff1f4,
+      #fff8f9
+    );
+}
+
+.hero h1 {
+  margin: 0;
+
+  font-size: 44px;
+
+  line-height: 1.15;
+
+  font-weight: 750;
+
+  color: #222;
+
+  max-width: 850px;
+}
+
+.hero p {
+  margin: 15px 0 22px;
+
+  font-size: 17px;
+
+  color: #555;
+}
+
+.hero button {
+  border: none;
+
+  background: #ff385c;
+
+  color: white;
+
+  padding: 12px 26px;
+
+  border-radius: 25px;
+
+  font-size: 15px;
+
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition: all 0.25s ease;
+}
+
+.hero button:hover {
+  background: #e91e46;
+
+  transform: translateY(-2px);
+
+  box-shadow:
+    0 7px 18px rgba(255, 56, 92, 0.25);
+}
+
+
+/* =========================================
+   CATEGORY BAR
+========================================= */
+
+.category-bar {
+  padding: 13px 20px;
+
+  background: white;
+
+  border-bottom: 1px solid #eeeeee;
+
+  display: flex;
+
+  justify-content: center;
+
+  align-items: center;
+
+  gap: 10px;
+
+  overflow-x: auto;
+}
+
+.category-bar button {
+  border: 1px solid #dddddd;
+
+  background: white;
+
+  color: #333;
+
+  padding: 8px 17px;
+
+  border-radius: 22px;
+
+  font-size: 13px;
+
+  cursor: pointer;
+
+  white-space: nowrap;
+
+  transition: all 0.2s ease;
+}
+
+.category-bar button:hover {
+  border-color: #ff385c;
+
+  color: #ff385c;
+}
+
+.category-bar button.active,
+.category-bar button.selected {
+  background: #ff385c;
+
+  color: white;
+
+  border-color: #ff385c;
+}
+
+
+/* =========================================
+   RESPONSIVE - TABLET
+========================================= */
+
+@media (max-width: 900px) {
+
+  .hero {
+    min-height: 240px;
+
+    padding: 40px 20px;
+  }
+
+  .hero h1 {
+    font-size: 36px;
+  }
+
+  .home-notes-section {
+    padding: 30px 5%;
+  }
+
+  .home-notes-section .notes-grid {
+    grid-template-columns:
+      repeat(2, minmax(0, 1fr));
+
+    gap: 18px;
+  }
+}
+
+
+/* =========================================
+   RESPONSIVE - MOBILE
+========================================= */
+
+@media (max-width: 600px) {
+
+  .hero {
+    min-height: 220px;
+
+    padding: 35px 18px;
+  }
+
+  .hero h1 {
+    font-size: 29px;
+  }
+
+  .hero p {
+    font-size: 15px;
+  }
+
+
+  .home-notes-section {
+    padding: 25px 16px 35px;
+  }
+
+
+  .home-notes-header {
+    flex-direction: column;
+
+    align-items: flex-start;
+
+    margin-bottom: 18px;
+  }
+
+  .home-notes-header h2 {
+    font-size: 25px;
+  }
+
+  .view-all-notes-btn {
+    padding: 9px 16px;
+  }
+
+
+  .home-notes-section .notes-grid {
+    grid-template-columns: 1fr;
+
+    gap: 15px;
+  }
+
+
+  .home-notes-section .note-card-image {
+    height: 115px;
+  }
+
+
+  .home-notes-navigation {
+    margin-top: 20px;
+
+    gap: 10px;
+  }
+
+  .home-nav-btn {
+    padding: 8px 14px;
+
+    font-size: 13px;
+  }
+}

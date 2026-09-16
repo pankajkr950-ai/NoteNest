@@ -1,0 +1,178 @@
+.edit-note-page {
+  min-height: 100vh;
+  padding: 60px 20px;
+
+  background:
+    radial-gradient(
+      circle at 10% 20%,
+      rgba(99, 102, 241, 0.25),
+      transparent 35%
+    ),
+    radial-gradient(
+      circle at 90% 80%,
+      rgba(168, 85, 247, 0.25),
+      transparent 35%
+    ),
+    linear-gradient(
+      135deg,
+      #eef2ff,
+      #f5f3ff,
+      #faf5ff
+    );
+}
+
+.edit-note-container {
+  max-width: 760px;
+  margin: 0 auto;
+
+  background: rgba(255, 255, 255, 0.94);
+
+  padding: 45px;
+
+  border-radius: 22px;
+
+  box-shadow:
+    0 25px 60px rgba(79, 70, 229, 0.12),
+    0 8px 25px rgba(0, 0, 0, 0.06);
+}
+
+.edit-note-container h1 {
+  text-align: center;
+
+  margin: 0;
+
+  font-size: 38px;
+
+  color: #171717;
+}
+
+.edit-note-subtitle {
+  text-align: center;
+
+  margin: 10px 0 38px;
+
+  color: #777;
+}
+
+.edit-note-container .form-group {
+  margin-bottom: 22px;
+}
+
+.edit-note-container label {
+  display: block;
+
+  margin-bottom: 9px;
+
+  font-size: 14px;
+
+  font-weight: 600;
+
+  color: #333;
+}
+
+.edit-note-container input,
+.edit-note-container textarea {
+  width: 100%;
+
+  box-sizing: border-box;
+
+  padding: 14px 16px;
+
+  border: 1px solid #ddd;
+
+  border-radius: 11px;
+
+  background: #fafafa;
+
+  font-size: 15px;
+
+  font-family: inherit;
+}
+
+.edit-note-container input:focus,
+.edit-note-container textarea:focus {
+  outline: none;
+
+  background: white;
+
+  border-color: #222;
+
+  box-shadow: 0 0 0 4px rgba(0, 0, 0, 0.06);
+}
+
+.edit-note-container textarea {
+  resize: vertical;
+
+  min-height: 130px;
+}
+
+.form-row {
+  display: grid;
+
+  grid-template-columns: 1fr 1fr;
+
+  gap: 20px;
+}
+
+.update-note-btn {
+  width: 100%;
+
+  margin-top: 10px;
+
+  padding: 15px;
+
+  border: none;
+
+  border-radius: 11px;
+
+  background: #111;
+
+  color: white;
+
+  font-size: 16px;
+
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition: 0.25s;
+}
+
+.update-note-btn:hover {
+  background: #333;
+
+  transform: translateY(-2px);
+}
+
+.update-note-btn:disabled {
+  opacity: 0.6;
+
+  cursor: not-allowed;
+
+  transform: none;
+}
+
+.edit-note-loading {
+  text-align: center;
+
+  margin-top: 80px;
+}
+
+@media (max-width: 700px) {
+  .edit-note-page {
+    padding: 30px 15px;
+  }
+
+  .edit-note-container {
+    padding: 30px 22px;
+  }
+
+  .form-row {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+
+  .edit-note-container h1 {
+    font-size: 30px;
+  }
+}

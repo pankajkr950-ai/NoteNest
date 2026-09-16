@@ -1,0 +1,229 @@
+/* ================================
+   CREATE NOTE PAGE
+================================ */
+
+.create-note-page {
+  min-height: 100vh;
+  padding: 60px 20px;
+
+  background:
+    radial-gradient(circle at 10% 20%, rgba(99, 102, 241, 0.25), transparent 35%),
+    radial-gradient(circle at 90% 80%, rgba(168, 85, 247, 0.25), transparent 35%),
+    linear-gradient(135deg, #eef2ff, #f5f3ff, #faf5ff);
+}
+
+/* ================================
+   MAIN CONTAINER
+================================ */
+
+.create-note-container {
+  max-width: 760px;
+  margin: 0 auto;
+
+  background: rgba(255, 255, 255, 0.92);
+
+  padding: 45px;
+
+  border-radius: 22px;
+
+  border: 1px solid rgba(255, 255, 255, 0.8);
+
+  box-shadow:
+    0 25px 60px rgba(79, 70, 229, 0.12),
+    0 8px 25px rgba(0, 0, 0, 0.06);
+
+  backdrop-filter: blur(10px);
+}
+
+/* ================================
+   HEADER
+================================ */
+
+.create-note-container h1 {
+  text-align: center;
+  margin: 0;
+  font-size: 38px;
+  font-weight: 700;
+  letter-spacing: -0.5px;
+  color: #171717;
+}
+
+.create-note-subtitle {
+  text-align: center;
+  margin: 10px 0 38px;
+  color: #777;
+  font-size: 15px;
+}
+
+/* ================================
+   FORM
+================================ */
+
+.form-group {
+  margin-bottom: 22px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 9px;
+  font-size: 14px;
+  font-weight: 600;
+  color: #333;
+}
+
+/* ================================
+   INPUT + TEXTAREA
+================================ */
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 14px 16px;
+  border: 1px solid #ddd;
+  border-radius: 11px;
+  background: #fafafa;
+  color: #222;
+  font-size: 15px;
+  font-family: inherit;
+  box-sizing: border-box;
+  transition: all 0.25s ease;
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+  color: #aaa;
+}
+
+.form-group textarea {
+  min-height: 130px;
+  resize: vertical;
+  line-height: 1.5;
+}
+
+/* ================================
+   INPUT FOCUS
+================================ */
+
+.form-group input:focus,
+.form-group textarea:focus {
+  outline: none;
+  background: #fff;
+  border-color: #222;
+  box-shadow: 0 0 0 4px rgba(0, 0, 0, 0.06);
+}
+
+/* ================================
+   BRANCH + SEMESTER
+================================ */
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+/* ================================
+   RATING
+================================ */
+
+.form-group input[type="number"] {
+  max-width: 180px;
+}
+
+/* ================================
+   CREATE BUTTON
+================================ */
+
+.create-note-btn {
+  width: 100%;
+  margin-top: 12px;
+  padding: 15px 20px;
+  border: none;
+  border-radius: 11px;
+  background: #111;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 600;
+  letter-spacing: 0.2px;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+.create-note-btn:hover {
+  background: #333;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.18);
+}
+
+.create-note-btn:active {
+  transform: translateY(0);
+}
+
+.create-note-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none;
+}
+
+/* ================================
+   FORM SECTIONS
+================================ */
+
+.create-note-container form {
+  width: 100%;
+}
+
+/* ================================
+   MOBILE RESPONSIVE
+================================ */
+
+@media (max-width: 700px) {
+  .create-note-page {
+    padding: 30px 15px;
+  }
+
+  .create-note-container {
+    padding: 30px 22px;
+    border-radius: 18px;
+  }
+
+  .create-note-container h1 {
+    font-size: 30px;
+  }
+
+  .create-note-subtitle {
+    margin-bottom: 30px;
+  }
+
+  .form-row {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+
+  .form-group input[type="number"] {
+    max-width: 100%;
+  }
+}
+
+/* ================================
+   SMALL MOBILE
+================================ */
+
+@media (max-width: 400px) {
+  .create-note-container {
+    padding: 25px 18px;
+  }
+
+  .create-note-container h1 {
+    font-size: 27px;
+  }
+
+  .form-group input,
+  .form-group textarea {
+    padding: 12px 13px;
+  }
+
+  .create-note-btn {
+    padding: 13px;
+  }
+}
