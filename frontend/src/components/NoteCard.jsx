@@ -10,7 +10,7 @@ function NoteCard({ note, onDelete }) {
   return (
     <div className="note-card">
 
-      {/* IMAGE */}
+      {/* Note Image */}
       <div className="note-card-image">
         {note.image ? (
           <img
@@ -24,33 +24,31 @@ function NoteCard({ note, onDelete }) {
         )}
       </div>
 
-      {/* CONTENT */}
+      {/* Note Content */}
       <div className="note-card-content">
 
-        {/* TITLE */}
+        {/* Note Title */}
         <h2 className="note-title">
           {note.title}
         </h2>
 
-        {/* BRANCH + SEMESTER */}
+        {/* Branch & Semester */}
         <p className="note-branch">
           🎓 {note.branch} • {note.semester}
         </p>
 
-        {/* SUBJECT */}
+        {/* Subject */}
         <p className="note-subject">
           📖 {note.subject}
         </p>
 
-        {/* BOTTOM */}
+        {/* Rating & View Button */}
         <div className="note-bottom">
 
-          {/* RATING */}
           <span className="note-rating">
-            ⭐ {note.rating}
+            ⭐ {note.rating || 0}
           </span>
 
-          {/* VIEW */}
           {note._id && (
             <Link
               to={`/notes/${note._id}`}
@@ -62,7 +60,7 @@ function NoteCard({ note, onDelete }) {
 
         </div>
 
-        {/* EDIT + DELETE */}
+        {/* Edit & Delete */}
         {onDelete && note._id && (
           <div className="note-actions">
 

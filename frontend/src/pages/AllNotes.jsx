@@ -3,7 +3,7 @@ import {
   getAllNotes,
   deleteNote,
 } from "../services/noteService";
-import NoteCard from "../components/NoteCard/NoteCard";
+import NoteCard from "../components/NoteCard";
 import "../styles/AllNotes.css";
 
 function AllNotes() {
